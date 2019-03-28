@@ -1,0 +1,9 @@
+.std-list {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .photos-collection__list-item {
+        width: 70%;
+    }
+}

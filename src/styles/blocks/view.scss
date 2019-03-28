@@ -1,0 +1,22 @@
+.change-view {
+    display: flex;
+    &__hidden {
+        width: 0;
+        visibility: hidden;
+
+        &:checked + .change-view__fake {
+            fill: crimson;
+        }
+    }
+
+    &__fake {
+        width: 40px;
+        height: 40px;
+        fill: $blue;
+
+        @media (max-width: 760px) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

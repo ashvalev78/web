@@ -1,8 +1,70 @@
-.header {
-  height: 50px;
+.profile-info {
+  position: fixed;
+  top: 0;
+  width: 70%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10px;
+  margin-bottom: 40px;
 
-  @include phones {
-    height: 20px;
+  @media (max-width: 1200px) {
+    width: 95%;
   }
 
+  &__left {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      width: 70%;
+    }
+
+    @media (max-width: 760px) {
+      width: 80%;
+    }
+
+    &-img {
+      border-radius: 50%;
+      border: 1px solid crimson;
+      overflow: hidden;
+      cursor: pointer;
+      min-width: 70px;
+      min-height: 70px;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+
+      @media (max-width: 1200px) {
+        width: 95%;
+      }
+
+      @media (max-width: 760px) {
+        min-width: 40px;
+        min-height: 40px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__info {
+    @media (max-width: 760px) {
+      font-size: 12px;
+    }
+    &-descr {
+      overflow-y: auto;
+      width: 100%;
+    }
+  }
+}
+
+#exit-btn {
+  color: $blue;
+
+  @media (max-width: 760px) {
+    font-size: 12px;
+  }
 }
