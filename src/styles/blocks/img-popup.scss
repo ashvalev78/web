@@ -1,5 +1,7 @@
 .img-popup {
     width: 70%;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width: 760px) {
         width: 90%;

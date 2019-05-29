@@ -41,23 +41,31 @@
         </label>
       </div>
       <ul class="photos-collection__list grid-list">
-        <li class="photos-collection__list-item">
-          <img src="./images/content/add.svg" alt="" id="add-photo-item" class="user-img">
+        <li class="photos-collection__list-item add-img">
+          <label for="file-input">
+            <input type="file" class="add-image__input" id="file-input">
+            <img src="./images/content/add.svg" alt="" id="add-photo-item" class="user-img">
+          </label>
         </li>
         <li class="photos-collection__list-item">
           <img src="./images/content/add.svg" alt="" class="user-img">
-        </li>
-        <li class="photos-collection__list-item">
-          <img src="./images/content/add.svg" alt="" class="user-img">
-        </li>
-        <li class="photos-collection__list-item">
-          <img src="./images/content/add.svg" alt="" class="user-img">
+          <svg class="delete-img">
+            <use xlink:href="./images/sprite.svg#garbage"></use>
+          </svg>
+          <svg class="visible-img">
+            <use xlink:href="./images/sprite.svg#visibility"></use>
+          </svg>
         </li>
       </ul>
     </main>
   </div>
   <div class="img-popup popup">
     <img src="./images/content/add.svg" alt="" class="user-img">
+  </div>
+  <div class="config-popup popup">
+    <h3 class="config__header">Настройки</h3>
+    <textarea name="descr" class="config__descr" placeholder="Описание" ></textarea>
+    <a href="#" class="config__submit">Подтвердить</a>
   </div>
   <div class="popup-bg">
     <div id="close-popup">X</div>

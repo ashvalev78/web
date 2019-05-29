@@ -55,11 +55,40 @@ let images = document.querySelectorAll('.photos-collection__list-item');
 
 function takeCloserLook() {
   images.forEach((image) => {
-    image.addEventListener('click', () => {
-      imgPopup.innerHTML = image.innerHTML;
-      showPopup(imgPopup);
-    });
+    if (!image.classList.contains('add-img')) {
+      image.addEventListener('click', () => {
+        imgPopup.innerHTML = image.querySelector('.user-img').outerHTML;
+        showPopup(imgPopup);
+      });
+    }
   });
 }
 
 takeCloserLook();
+
+// смена приватности изображения, дописать сюда бэк
+function changePrivacy(btn) {
+  btn.classList.toggle('visible');
+}
+
+// обработчик на кнопки смены приватности
+document.querySelectorAll('.visible-img').forEach(img => {
+  img.addEventListener('click', () => {
+    changePrivacy(img);
+  });
+});
+
+// Показать/скрыть настройки
+
+document.querySelector('.profile-info__config').addEventListener('click', (e) => {
+  e.preventDefault();
+  let configPopup = document.querySelector('.config-popup');
+
+  showPopup(configPopup);
+});
+
+// подтвержение изменений в настройках
+document.querySelector('.config__submit').addEventListener('click', () => {
+  // вписать код для изменения статуса на клиентской части и сервере
+  closePopups();
+});
